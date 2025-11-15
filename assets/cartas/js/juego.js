@@ -1,4 +1,15 @@
-let deck = [];
+//funcion anónima autoejecutable (autoinvocadas) para evitar que las variables y funciones definidas en este archivo se mezclen con otras en el ámbito global
+//si necesito llamar a esta funcion inmediatamente despues de ser definida, la puedo envolver en parentesis y agregarle al final otros parentesis para que se ejecute
+//esta instruccion lo que hace es crear un nuevo ámbito (scope) que no tiene una referencia por nombre, por lo que no se puede acceder desde fuera de este bloque de codigo, no va a ser posible llamar al objeto directamente
+//(function() {
+//})();
+
+(() => {
+    'use strict'; //modo estricto, para evitar errores comunes en JS, que sea estricto a la hora de interpretar el codigo, hará el código más limpio y seguro.
+    //Otras funciones que tiene el useStrict son: evita la creación de variables globales accidentales, lanza errores en asignaciones a propiedades no modificables, prohibe el uso de palabras reservadas como nombres de variables, entre otras cosas.
+
+    //todo el codigo del juego va aqui adentro
+    let deck = [];
 const tipos = ['C', 'D', 'H', 'S']; //C de corazones, D de diamantes, H de corazones, S de spadas
 const especiales = ['A', 'J', 'Q', 'K']; //A de as, J de jota, Q de reina, K de rey
 
@@ -31,7 +42,6 @@ const crearDeck = () => {
     }
 
     deck = _.shuffle(deck); //underscore tiene una funcion que se llama shuffle que me permite mezclar un array de forma aleatoria
-    console.log(deck);
     return deck; //retorno el deck para poder usarlo en otras partes del codigo
 }
 
@@ -161,4 +171,11 @@ btnPedir.addEventListener('click', () => {
     //Si la computadora llega a 13, por ejemplo, empatan 
     //Si la computadora se pasa de 21, gana el jugador
     //Si el jugador llega a 20 es un reto mas para la computadora, tiene que llegar a 20 sin pasarse, pero si se pasa, gana el jugador. Tendremos una condicion relativa, es decir, que depende de la puntuacion
+
+
+    })();
+//cuando se ejecute el programa, va a ver que estoy creando mi funcion, e inmediatamente la estoy ejecutando o llamando 
+//si defines una variable dentro de esta funcion y luego la llamas en consola, va a aparecer como que no está definida si tratas de acceder a ella desde fuera de la funcion
+//no lo vamos a poder encontrar porque está ubicado en algun lugar de memoria sin un identificador por nombre, entonces es casi imposible saber donde se ubica esto en la memoria
+
 
