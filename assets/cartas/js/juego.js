@@ -134,6 +134,7 @@ btnPedir.addEventListener('click', () => {
 
     btnNuevo.addEventListener('click', () => {
         console.clear();
+        deck = []; //reinicio el deck
         deck = crearDeck();
         puntosJugador = 0;
         puntosComputadora = 0;
