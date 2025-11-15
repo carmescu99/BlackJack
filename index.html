@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <!--lenguaje que vamos a utilizar en nuestra pagina-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blackjack</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="titulo">Blackjack</header>
+    <main class="principal">
+    <div class="row mt-2"> <!--contenedor en html-->
+        <div class="col text-center">
+            <button id="btnNuevo" class="btn btn-primary">Nuevo Juego</button>
+            <button id="btnPedir" class="btn btn-success">Pedir Carta</button>
+            <button id="btnDetener" class="btn btn-danger">Detener</button>
+        </div>
+    
+    <div class="row container"> <!--le decimos que es una linea y que no quede pegado a los bordes-->
+        <div class="col">
+            <h1>Jugador1 - <small>0</small></h1> <!--small es para que el texto sea mas pequeño, aqui muestra los puntajes del jugador-->
+            <div id="jugador-cartas">
+                <!--aqui van las cartas
+                <img class="carta" src="/assets/cartas/2S.png" alt="cartajugador">
+                <img class="carta" src="/assets/cartas/2S.png" alt="cartajugador">
+                <img class="carta" src="/assets/cartas/2S.png" alt="cartajugador">
+                <img class="carta" src="/assets/cartas/2S.png" alt="cartajugador">
+                Esto se hace porque cuando el juego se inicia, el jugador no tiene ninguna carta y la puntuacion esta en 0-->
+            </div>
+        </div>
+    </div>
+    
+    <div class="row container mt-4"> <!--le decimos que es una linea y que no quede pegado a los bordes-->
+        <div class="col">
+            <h1>Maquina - <small>0</small></h1> <!--small es para que el texto sea mas pequeño, aqui muestra los puntajes del jugador-->
+            <div id="maquina-cartas">
+                <!--aqui van las cartas
+                <img class="carta" src="/assets/cartas/3S.png" alt="cartamaquina">
+                <img class="carta" src="/assets/cartas/3S.png" alt="cartamaquina">
+                <img class="carta" src="/assets/cartas/3S.png" alt="cartamaquina">
+                <img class="carta" src="/assets/cartas/3S.png" alt="cartamaquina">-->
+            </div>
+        </div>
+    </div>
+    </main>
+     <script src="assets/cartas/js/underscore-min.js"></script> <!-- UMD global -->
+    <script src="assets/cartas/js/juego.js"></script>
+    <script>
+    console.log(_.VERSION); // 1.13.7
+    console.log(_.map([1,2,3], x => x * 10)); // [10,20,30]
+    </script>
+    
+  </body>
+</html>

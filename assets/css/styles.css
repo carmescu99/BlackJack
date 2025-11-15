@@ -1,0 +1,39 @@
+/*voy a aplicar lo que esté entre las llaves a los elementos html y body*/
+html, body{
+    margin:0; /*eliminar margenes*/
+    padding:0; /*eliminar padding*/
+    height:100%; /*altura del 100%*/
+    background-color: rgb(34, 61, 34); /*color de fondo verde*/
+    color:white; /*color de texto blanco*/
+}
+
+.principal{
+    display: flex; /*utilizar flexbox para el diseño*/
+    flex-direction: column; /*organizar los elementos en una columna*/
+    align-items: center; /*centrar los elementos horizontalmente*/
+    justify-content: center; /*centrar los elementos verticalmente*/
+}
+
+.titulo{
+    text-align: center; /*centrar el texto*/
+    background-color: black; /*color de fondo negro*/
+    color:white; /*color de texto blanco*/
+    padding: 20px; /*crear un espacio interno dentro de un elemento, separando su contenido del borde*/
+    font-size: 25px; /*tamaño de fuente*/
+}
+
+/*el punto más el nombre se pone cuando es una clase y el hashtag más el nombre se pone cuando es id*/
+.carta{
+    position: relative;
+    width: 150px; 
+    left: 100px; /*lo corremos un poco hacia la derecha*/
+    margin-left: -70px;
+
+}
+
+#maquina_cartas, #jugador_cartas{
+    height: 240px;
+
+}
+
+
