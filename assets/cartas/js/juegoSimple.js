@@ -177,5 +177,3 @@ btnPedir.addEventListener('click', () => {
 //cuando se ejecute el programa, va a ver que estoy creando mi funcion, e inmediatamente la estoy ejecutando o llamando 
 //si defines una variable dentro de esta funcion y luego la llamas en consola, va a aparecer como que no está definida si tratas de acceder a ella desde fuera de la funcion
 //no lo vamos a poder encontrar porque está ubicado en algun lugar de memoria sin un identificador por nombre, entonces es casi imposible saber donde se ubica esto en la memoria
-
-
